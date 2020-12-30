@@ -1,4 +1,4 @@
-
+@section('title', 'Order')
 @include("parts.common")
 <body>
   @include("parts.header")

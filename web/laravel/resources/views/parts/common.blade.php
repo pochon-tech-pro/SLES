@@ -7,11 +7,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	@isset($title)
-	<title>{{ $title }} - SLES</title>
-	@else
-	<title>SLES</title>
-	@endisset
+	<title>@yield('title') - SLES</title>
 
 	<!-- Bootstrap core CSS -->
 	<link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
