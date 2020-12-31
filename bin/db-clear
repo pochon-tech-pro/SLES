@@ -1,0 +1,7 @@
+#! /bin/bash
+
+echo 'Plase Enter Any Key !!'
+read Key
+echo "hello $Key"
+
+docker-compose ps
