@@ -1,4 +1,0 @@
-*
-!.gitignore
-# !で始まる行: !以降のパターン文字列が示すファイル or ディレクトリを無視しない
-# https://qiita.com/anqooqie/items/110957797b3d5280c44f
