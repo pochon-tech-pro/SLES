@@ -1,0 +1,13 @@
+#! /bin/bash
+
+echo 'Lets DB Clear !!'
+
+# docker-compose kill db ;
+# rm -r ./docker/db/data;
+# docker-compose up -d db;
+# sleep 20s
+
+docker-compose exec php bash -c "cd laravel; php artisan migrate:fresh";
+docker-compose exec php bash -c "cd laravel; php artisan migrate";
+
+echo 'Succuess !!';
