@@ -9,15 +9,30 @@
       <div class="panel panel-default">
         <div class="panel-heading">注文</div>
         <div class="panel-body">
-          <form action="{{ url('/orders') }}" method="POST">
-            {{ csrf_field() }}
+          <form>
             <div class="form-group">
               <label class="control-label">注文するユーザのID</label>
-              <input class="form-control" type="text" name="user_id">
+              <input class="form-control" type="text" id="userId">
+            </div>
+            {{-- <div class="form-group">
+              <label class="control-label">項目2</label>
+              <div class="radio">
+                <label><input type="radio" name="radio">選択肢1</label>
+                <label><input type="radio" name="radio">選択肢2</label>
+                <label><input type="radio" name="radio">選択肢3</label>
+              </div>
             </div>
             <div class="form-group">
+              <label class="control-label">項目3</label>
+              <div class="checkbox">
+                <label><input type="checkbox" name="checkbox">選択肢1</label>
+                <label><input type="checkbox" name="checkbox">選択肢2</label>
+                <label><input type="checkbox" name="checkbox">選択肢3</label>
+              </div>
+            </div> --}}
+            <div class="form-group">
               <label class="control-label">注文ステータス</label>
-              <select class="form-control" name="status">
+              <select class="form-control" id="status">
                 <option value="1">注文完了</option>
                 <option value="2">出荷完了</option>
                 <option value="3">その他</option>
@@ -26,11 +41,11 @@
             <div class="form-group">
               <label class="control-label">商品選択</label>
               <div class="checkbox" id="goods">
-                <label><input type="checkbox" name="goods[]" value="1001">歯ブラシ</label>
-                <label><input type="checkbox" name="goods[]" value="1002">歯磨き粉</label>
+                <label><input type="checkbox" name="checkbox" value="1001">歯ブラシ</label>
+                <label><input type="checkbox" name="checkbox" value="1002">歯磨き粉</label>
               </div>
-            </div>
-            <input type="submit" value="登録" /> 
+            </div> 
+            <button class="btn btn-default" id="submitBtn">登録</button>
           </form>
         </div>
       </div>
