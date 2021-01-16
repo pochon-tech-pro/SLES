@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Order;
 
 class OrderController extends Controller
 {
@@ -34,8 +35,13 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        dd($request->input());
+        $order = new Order();
+        // $order->member_id = $request->user_id;
+        // $order->manager_id = 0;
+        $order->status = $request->status;
+        $order->save();
+
+        return view('orders.create');
     }
 
     /**
