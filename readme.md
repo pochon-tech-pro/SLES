@@ -35,3 +35,14 @@ mysql -udocker -pdocker -Ddatabase
 docker-compose exec db bash
 mysql -udocker -pdocker; drop database `database`
 ```
+
+# Model作成時に、TypeHint用のコメントを記述したい場合
+```bash
+# composer require  --dev --update-with-dependencies --prefer-dist doctrine/dbal ~2.3 
+docker-compose exec php bash;
+cd laravel;
+# 全てやる場合
+# php artisan ide-helper:models
+# 個別にやる場合
+php artisan ide-helper:models App\\Models\\Order
+```
