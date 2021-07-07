@@ -1,26 +1,9 @@
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>管理画面-注文</title>
-    <link rel="stylesheet" href="./css/bootstrap.css">
-    <script src="./js/jquery.js"></script>
-    <script src="./js/bootstrap.js"></script>
-  </head>
+<!DOCTYPE html>
+<html lang="ja">
+@section('title', '注文')
+@include("parts.common")
   <body>
-    <!-- header -->
-    <nav class="navbar navbar-default">
-      <!-- <div class="container-fluid"> -->
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Top</a>
-        </div>
-      </div>
-    </nav>
+    @include("parts.nav")
     <!-- body -->
     <div class="container">
       <div class="panel panel-default">
@@ -69,20 +52,20 @@
     </div>
   </body>
   <script>
-    // querySelector: https://www.webprofessional.jp/dom-manipulation-vanilla-javascript-no-jquery/
-    const $elUserId = document.querySelector('#userId');
-    const $elStatus = document.querySelector('#status');
-    // querySelectorAll & checkbox: https://techacademy.jp/magazine/29964
-    const $elGoods = document.querySelectorAll('#goods input[type="checkbox"]');
-    const $elSubmitBtn = document.querySelector('#submitBtn');
-    $elSubmitBtn.addEventListener('click', () => {
-      const goods = [];
-      for (let i = 0; i < $elGoods.length; i++){
-        if($elGoods[i].checked){ //(color1[i].checked === true)と同じ
-          goods.push($elGoods[i].value);
-        }
-      }
-      alert(`登録完了: ${$elUserId.value}, ${$elStatus.value}, ${goods.join(',')}`)
-    })
+    // // querySelector: https://www.webprofessional.jp/dom-manipulation-vanilla-javascript-no-jquery/
+    // const $elUserId = document.querySelector('#userId');
+    // const $elStatus = document.querySelector('#status');
+    // // querySelectorAll & checkbox: https://techacademy.jp/magazine/29964
+    // const $elGoods = document.querySelectorAll('#goods input[type="checkbox"]');
+    // const $elSubmitBtn = document.querySelector('#submitBtn');
+    // $elSubmitBtn.addEventListener('click', () => {
+    //   const goods = [];
+    //   for (let i = 0; i < $elGoods.length; i++){
+    //     if($elGoods[i].checked){ //(color1[i].checked === true)と同じ
+    //       goods.push($elGoods[i].value);
+    //     }
+    //   }
+    //   alert(`登録完了: ${$elUserId.value}, ${$elStatus.value}, ${goods.join(',')}`)
+    // })
   </script>
 </html>

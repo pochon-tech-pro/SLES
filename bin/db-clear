@@ -8,6 +8,5 @@ echo 'Lets DB Clear !!'
 # sleep 20s
 
 docker-compose exec php bash -c "cd laravel; php artisan migrate:fresh";
-docker-compose exec php bash -c "cd laravel; php artisan migrate";
 
 echo 'Succuess !!';

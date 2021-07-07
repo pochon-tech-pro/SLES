@@ -18,4 +18,4 @@ Route::get('/', function () {
 });
 // Laravel 8 からは、名前空間をしっかりと定義する必要がありそう
 // https://qiita.com/tamakiiii/items/e71040173fa0a1fcad83
-Route::get('/order', 'App\Http\Controllers\OrderController@index');
+Route::resource('orders', 'App\Http\Controllers\OrderController');
